@@ -12,7 +12,7 @@ using namespace std;
 int main(int argc, char** argv)
 {   
     //Variables para medir tiempos de ejecucion
-    const int num_iterations = 1;
+    const int num_iterations = 200;
     double total_time_lucas_kanade = 0.0;
     double total_time_lucas_kanade_dense = 0.0;
     double total_time_farneback = 0.0;
@@ -39,6 +39,7 @@ int main(int argc, char** argv)
     bool to_gray = true;
 
      for (int i = 0; i < num_iterations; ++i) {
+        std::cout << "Iteración: " << i+1 << "\n";
         // Medir tiempo para Lucas-Kanade
         auto start_lk = std::chrono::high_resolution_clock::now();
         
